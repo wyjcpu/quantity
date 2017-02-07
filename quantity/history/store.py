@@ -2,7 +2,7 @@
 import json
 import os
 from datetime import datetime
-from quantity.utils import stock
+from ..utils import stock
 
 import pandas as pd
 
@@ -68,6 +68,7 @@ class CSVStore(Store):
 
     def write_summary(self, stock_code, date):
         file_path = os.path.join(self.raw_path, '{}_summary.json'.format(stock_code))
+        
         with open(file_path, 'w') as f:
             latest_day = datetime.strptime(date, '%Y-%m-%d')
             summary = dict(

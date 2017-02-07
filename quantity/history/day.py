@@ -8,7 +8,7 @@ from multiprocessing.pool import ThreadPool
 import requests
 
 from pyquery import PyQuery
-from quantity.history import helpers, store
+from . import helpers, store
 
 
 class Day:
@@ -48,16 +48,18 @@ class Day:
         data_year = latest_date.year
         data_quarter = helpers.get_quarter(latest_date.month)
         now_year = datetime.now().year
+        
         # 使用下一天的日期作为更新起始日，避免季度末时多更新上一季度的内容
         tomorrow = datetime.now() + timedelta(days=1)
         now_quarter = helpers.get_quarter(tomorrow.month)
-
         updated_data = list()
+
         for year in range(data_year, now_year + 1):
             for quarter in range(1, 5):
                 if year == data_year:
                     if quarter < data_quarter:
                         continue
+        
                 if year == now_year:
                     if quarter > now_quarter:
                         continue
@@ -68,7 +70,9 @@ class Day:
                 #     if quarter < data_quarter:
                 #         continue
                 updated_data += self.get_quarter_history(stock_code, year, quarter)
+        
         updated_data.sort(key=lambda day: day[0])
+        
         return updated_data
 
     def init_stock_history(self, stock_code):

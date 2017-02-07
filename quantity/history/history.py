@@ -47,6 +47,7 @@ class History(object):
             stock_csv = stock+'.csv'
             stock_code = stock
             csv_path = os.path.join(path, stock_csv)
+            
             self.market[stock_code] = Indicator(stock_code, pd.read_csv(csv_path, index_col='date'))
             return
 

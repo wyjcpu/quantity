@@ -17,3 +17,14 @@ tensorflow
 scikit-learn
 scipy
 sympy
+ta-lib
+jupyter
+
+six
+yarl
+aiohttp>=1.1.1
+easyutils
+tushare
+zipline
+pyalgotrade
+git+https://github.com/ematvey/pybacktest.git
