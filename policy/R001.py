@@ -7,8 +7,8 @@ from . import Policy
 class R001(Policy):
     '''
     昨天涨幅8%+，今天交易量少于昨天的30%及以上
-    -------------
-    (REF(CLOSE, 1) / REF(CLOSE, 2) >= 1.08) AND (VOL / REF(VOL, 1) >= 0.30);
+
+    (REF(CLOSE,1) / REF（CLOSE，2）>= 1.08) and (VOL / REF(VOL, 1) <= 0.30)
     '''
 
     name = u'缩量三一'

@@ -1,6 +1,8 @@
 # -*- coding: gbk -*-
 import matplotlib
+
 matplotlib.use("TKAgg")
+
 from matplotlib.widgets import RadioButtons
 import matplotlib.pyplot as plt
 import pandas as pd

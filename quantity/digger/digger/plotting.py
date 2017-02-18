@@ -26,6 +26,7 @@ def plot_strategy(price_data, indicators={}, deals=[], curve=[], marks=[]):
         显示回测结果。
     """
     print "plotting.."
+    
     fig = plt.figure()
     frame = widgets.TechnicalWidget(fig, price_data)
     axes = frame.init_layout(

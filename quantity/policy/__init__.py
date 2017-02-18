@@ -45,4 +45,23 @@ class Policy(object):
     def __del__(self):
         del self.data
 
+from .R001 import R001
+from .R002 import R002
+from .R003 import R003
+from .R004 import R004
+from .R005 import R005
+from .R006 import R006
+from .R007 import R007
+from .R008 import R008
+from .R009 import R009
+from .R010 import R010
+from .R011 import R011
+from .R012 import R012
+from .R013 import R013
+from .R014 import R014
+from .R015 import R015
+from .R016 import R016
+
+# submodules = (R001, R002, R003, R004, R005, R006, R007, R008, R009, R010, R011, R012, R013, R014, R015, R016,)
+submodules = (R001, R002, R003, R004, R005, R006, R008, R009, R010, R011, R012, R013, R014, R015, R016,)
 
