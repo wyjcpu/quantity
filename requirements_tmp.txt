@@ -27,4 +27,4 @@ easyutils
 tushare
 zipline
 pyalgotrade
-git+https://github.com/ematvey/pybacktest.git
+# git+https://github.com/ematvey/pybacktest.git
